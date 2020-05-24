@@ -1,0 +1,35 @@
+.product {
+    background-color: #f1f1f1;
+    display: flex;
+    height: 215px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: background-color 0.5s linear;
+    position: relative;
+}
+.product-name {
+    font-size: 22px;
+}
+.product-owner {
+    font-size: 14px;
+    color: #6c6c6c;
+}
+.product:hover {
+    cursor: pointer;
+    background-color: #d1d1d1;
+}
+.button-deleteProducts {
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    z-index: 99;
+}
+.input-changeProductName {
+    position: absolute;
+    bottom: 40px;
+    width: calc(100% - 25%);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+}
