@@ -35,6 +35,7 @@ class ProductInfo extends React.Component {
     render() {
 
         const {loadedProduct} = this.state;
+
         let productInfo = null;
         let showProductButton = 'Show Products';
 

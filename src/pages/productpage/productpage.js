@@ -1,10 +1,7 @@
 import React from 'react';
-import './product.styles.scss';
+import './productpage.styles.scss';
 
 import {Container, Row, Col} from 'reactstrap';
-
-import Header from '../header/header.page';
-import Footer from '../footer/footer.page';
 
 import ProductInfo from '../../components/product-info/product-info.component';
 import ProductList from '../../components/productl-list/product-list.component';
@@ -81,8 +78,7 @@ class ProductPage extends React.Component {
     }
 
     productSelectedHandler = (id) => {
-        console.log(this);
-        this.setState(state => state.productId = id);        
+        this.setState(state => state.productId = id);
     }
 
     toggleProductsHandler = () => {
@@ -158,18 +154,16 @@ class ProductPage extends React.Component {
                         <SelectBox options={regions} selectRegionHandler={this.selectRegionHandler}/></Col>
                 </Row>
             </Container>
-            
+
         }
 
         return (
             <div className="product-page" id="product_page">
-                <Header/>
                 <ProductInfo
                     productId={productId}
                     toggleProductsHandler={this.toggleProductsHandler}
                     showProducts={showProducts}/> {productFilters}
                 {productList}
-                <Footer/>
             </div>
         )
     }
